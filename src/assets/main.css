@@ -1,0 +1,71 @@
+:root {
+    --bg: #0f172a;
+    --card-bg: #1e293b;
+    --accent: #38bdf8;
+    --text: #f1f5f9;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    /* Уменьшили падинг для мобилок */
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+/* Эффект карточек */
+.glass-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+    /* Шрифт будет уменьшаться сам */
+    line-height: 1.2;
+}
+
+@media (max-width: 400px) {
+    nav {
+        gap: 10px;
+        /* Сужаем меню */
+        padding: 15px 5px;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 40px 0 !important;
+    }
+
+    .glass-card {
+        padding: 15px;
+    }
+
+    .icon-list {
+        grid-template-columns: 1fr;
+        /* На очень узких экранах иконки в один столбик */
+        justify-items: start;
+        padding-left: 20px;
+    }
+}
