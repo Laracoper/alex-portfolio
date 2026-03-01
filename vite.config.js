@@ -7,7 +7,7 @@ export default defineConfig(({ command }) => {
   return {
     // Если запускаем билд для Гитхаба — ставим путь репозитория, 
     // если просто разработка (npm run dev) — используем корень '/'
-    base: command === 'build' ? '/my-cool-portfolio/' : '/',
+    base: command === 'build' ? '/alex-portfolio/' : '/',
     
     plugins: [
       vue(),
