@@ -6,7 +6,7 @@ const isSending = ref(false)
 const statusMessage = ref('')
 
 // ЗАМЕНИ НА СВОЙ URL ИЗ ШАГА 2
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbypEPfB-Wh0WLcko1Ff_8bbEFIjqcCwPON4mAsLiQbUXwqMrw5sNG_0RP3D-OGi64L0ag/exec'
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwELYCdT3ALhhayi6bLJJ7c9JKT96xkRnVDHPMC7zOo3iT02etfOqlao_VB0t2w6UEw/exec'
 
 const submitForm = async () => {
   isSending.value = true
